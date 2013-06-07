@@ -29,7 +29,25 @@
 </head>
 
 <body>
+ 
+       <?php if(!$this->config->item('Nav_Bar')): ?>
+        <div data-role="navbar" data-swatch="a"  >
+	<ul>
+            
+            <?php 
+            $nav_options = $this->config->item('Nav_Options');
+                foreach ($nav_options as $tab_name => $tab_link) {
+                    
+                   echo '<li><a href=' .$tab_link. 'data-icon="custom" data-iconpos="top" >'.$tab_name. '</a></li>';
+                }
+            
+            ?>
+                
+        </ul>
+        </div> 
     
+       <?php endif;  ?>
+	     
 </body>
 
 </html>

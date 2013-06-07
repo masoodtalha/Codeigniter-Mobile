@@ -22,6 +22,13 @@ class Welcome extends CI_Controller {
            $this->load->view('common/header');
            
 	}
+        
+        public function test()
+        {
+            $nav_options = $this->config->item('Nav_Options');
+           
+            print_r($nav_options);
+        }
 }
 
 /* End of file welcome.php */
